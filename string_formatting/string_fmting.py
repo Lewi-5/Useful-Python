@@ -1,5 +1,8 @@
 from typing import *
 
+# TODO
+# add section on ljust, rjust, center
+
 
 """
 decimal length and char width
@@ -74,4 +77,25 @@ char: str = 'IE'
 myers_briggs: str = "{}NTJ".format(char[introversion >= 0])
 
 # print(myers_briggs) # prints INTJ
+
+"""
+percent specifier
+"""
+
+movie_ticket: float = 17.95
+
+days: int = 89
+
+
+hours: float = 1012.834
+
+movie_sentence: str = "for %05d days I spent %07.3f per movie and watched a total of %09.2f hours" % (days, movie_ticket, hours)
+
+# print(movie_sentence)
+
+
+"""
+
+"""
+
 
