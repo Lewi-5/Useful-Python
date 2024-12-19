@@ -95,7 +95,7 @@ movie_sentence: str = "for %05d days I spent %07.3f per movie and watched a tota
 
 
 """
-
+.ljust .rjust .center
 """
 
 
