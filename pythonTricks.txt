@@ -1,0 +1,46 @@
+list of elems mapped to its own index values, my favorite way
+
+indices = [index for index,_ in enumerate(lst)]
+
+map a list to its own indexes other approaches:
+Yes, you can use a lambda function with the `map()` function or a list comprehension to achieve this easily. Here are two approaches:
+
+1. Using `map()` with a lambda function:
+
+```python
+my_list = [10, 20, 30, 40, 50]
+result = list(map(lambda x: my_list.index(x) + 1, my_list))
+print(result)
+```
+
+2. Using a list comprehension:
+
+```python
+my_list = [10, 20, 30, 40, 50]
+result = [my_list.index(x) + 1 for x in my_list]
+print(result)
+```
+
+Both of these approaches will output:
+
+```
+[1, 2, 3, 4, 5]
+```
+
+The list comprehension method is generally preferred in Python as it's more readable and slightly more efficient.
+
+However, if you just want to create a list of numbers from 1 to the length of the original list, you can use an even simpler approach:
+
+```python
+my_list = [10, 20, 30, 40, 50]
+result = list(range(1, len(my_list) + 1))
+print(result)
+```
+
+This will also output:
+
+```
+[1, 2, 3, 4, 5]
+```
+
+This last method is the most efficient if you don't need to reference the original list values.
