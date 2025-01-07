@@ -1,0 +1,40 @@
+in python i am trying list comprehension inside a dictionary:
+
+sheet1 = {chr(i): [n,n,n] for i in range(ord('A'), ord('D'))}
+
+the thing i don;t know is how to increase the value n by 1 for each iteration of i - how do I iterate n and i, what is the syntax?
+
+There are a few ways to handle this. Here are some solutions:
+
+1. Using enumerate():
+```python
+sheet1 = {chr(i): [n+1, n+1, n+1] for n, i in enumerate(range(ord('A'), ord('D')))}
+```
+
+2. Using a range for both values:
+```python
+sheet1 = {chr(i): [n, n, n] for i, n in zip(range(ord('A'), ord('D')), range(1, 4))}
+```
+
+3. Using i directly to calculate n:
+```python
+sheet1 = {chr(i): [i-ord('A')+1, i-ord('A')+1, i-ord('A')+1] for i in range(ord('A'), ord('D'))}
+```
+
+All these will give you similar results. For example:
+```python
+# Result:
+{'A': [1, 1, 1], 'B': [2, 2, 2], 'C': [3, 3, 3]}
+```
+
+Choose the one that best fits your needs. The first option using enumerate() is probably the most readable and commonly used approach.
+
+If you want to start with a different number or use a different increment, you can modify these accordingly. For example:
+
+```python
+# Starting from 0:
+sheet1 = {chr(i): [n, n, n] for n, i in enumerate(range(ord('A'), ord('D')), 0)}
+
+# Starting from 5:
+sheet1 = {chr(i): [n, n, n] for n, i in enumerate(range(ord('A'), ord('D')), 5)}
+```
