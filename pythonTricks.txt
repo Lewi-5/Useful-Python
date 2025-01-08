@@ -1,3 +1,8 @@
+if you want a conditional in your list comprehension, conditional comes after the the for...in... statement
+lst = [n for n in range(10)]
+
+nw = [n for n in lst if n > 5]
+
 list of elems mapped to its own index values, my favorite way
 
 indices = [index for index,_ in enumerate(lst)]
