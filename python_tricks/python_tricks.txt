@@ -1,0 +1,20 @@
+3:54 PM 2025-01-04
+
+while doing the CSES two sets problem I saw an easy way to pretty print a list
+use unpacker in print function
+lst  = [i for i in range(0, 10)]
+
+print(*lst, end=" ") # 0 1 2 3 4 5 6 7 8 9 
+
+
+CSES number spiral saw this nice way to map an integer space integer input to two variables
+y, x = map(int, input().split())
+
+
+
+------------------------
+5:43 PM 2025-01-12
+https://www.codewars.com/kata/58ac59d21c9e1d7dc5000150/train/python
+while doing code wars 'cut array into smaller parts' saw slices used in list comprehension: csize is chunksize btw
+def makeParts(arr, csize):
+  return [ arr[i: i + csize] for i in range(0, len(arr), csize)]
