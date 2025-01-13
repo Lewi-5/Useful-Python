@@ -1,0 +1,11 @@
+standard
+
+lst = [n for n in range(10,0,-1)]
+
+using reversed
+
+other = list(reversed(range(11)))[:-1]
+
+both will create this list:
+
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
